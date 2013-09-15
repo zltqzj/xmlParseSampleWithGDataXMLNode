@@ -19,6 +19,9 @@
 		1C3945F817E0AD31007EFB8B /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C3945F617E0AD31007EFB8B /* MainStoryboard_iPhone.storyboard */; };
 		1C3945FB17E0AD31007EFB8B /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C3945F917E0AD31007EFB8B /* MainStoryboard_iPad.storyboard */; };
 		1C3945FE17E0AD31007EFB8B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3945FD17E0AD31007EFB8B /* ViewController.m */; };
+		1C39460717E0AD6C007EFB8B /* StudentXML.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1C39460417E0AD6C007EFB8B /* StudentXML.xml */; };
+		1C39460817E0AD6C007EFB8B /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C39460617E0AD6C007EFB8B /* GDataXMLNode.m */; };
+		1C39460A17E0AEDA007EFB8B /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C39460917E0AEDA007EFB8B /* libxml2.2.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,10 @@
 		1C3945FA17E0AD31007EFB8B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		1C3945FC17E0AD31007EFB8B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1C3945FD17E0AD31007EFB8B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1C39460417E0AD6C007EFB8B /* StudentXML.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = StudentXML.xml; sourceTree = "<group>"; };
+		1C39460517E0AD6C007EFB8B /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
+		1C39460617E0AD6C007EFB8B /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
+		1C39460917E0AEDA007EFB8B /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C39460A17E0AEDA007EFB8B /* libxml2.2.dylib in Frameworks */,
 				1C3945DF17E0AD31007EFB8B /* UIKit.framework in Frameworks */,
 				1C3945E117E0AD31007EFB8B /* Foundation.framework in Frameworks */,
 				1C3945E317E0AD31007EFB8B /* CoreGraphics.framework in Frameworks */,
@@ -58,6 +66,7 @@
 		1C3945D217E0AD31007EFB8B = {
 			isa = PBXGroup;
 			children = (
+				1C39460917E0AEDA007EFB8B /* libxml2.2.dylib */,
 				1C3945E417E0AD31007EFB8B /* xmlParseSample */,
 				1C3945DD17E0AD31007EFB8B /* Frameworks */,
 				1C3945DC17E0AD31007EFB8B /* Products */,
@@ -85,6 +94,9 @@
 		1C3945E417E0AD31007EFB8B /* xmlParseSample */ = {
 			isa = PBXGroup;
 			children = (
+				1C39460417E0AD6C007EFB8B /* StudentXML.xml */,
+				1C39460517E0AD6C007EFB8B /* GDataXMLNode.h */,
+				1C39460617E0AD6C007EFB8B /* GDataXMLNode.m */,
 				1C3945ED17E0AD31007EFB8B /* AppDelegate.h */,
 				1C3945EE17E0AD31007EFB8B /* AppDelegate.m */,
 				1C3945F617E0AD31007EFB8B /* MainStoryboard_iPhone.storyboard */,
@@ -167,6 +179,7 @@
 				1C3945F517E0AD31007EFB8B /* Default-568h@2x.png in Resources */,
 				1C3945F817E0AD31007EFB8B /* MainStoryboard_iPhone.storyboard in Resources */,
 				1C3945FB17E0AD31007EFB8B /* MainStoryboard_iPad.storyboard in Resources */,
+				1C39460717E0AD6C007EFB8B /* StudentXML.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +193,7 @@
 				1C3945EB17E0AD31007EFB8B /* main.m in Sources */,
 				1C3945EF17E0AD31007EFB8B /* AppDelegate.m in Sources */,
 				1C3945FE17E0AD31007EFB8B /* ViewController.m in Sources */,
+				1C39460817E0AD6C007EFB8B /* GDataXMLNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +288,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "xmlParseSample/xmlParseSample-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "xmlParseSample/xmlParseSample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -285,6 +300,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "xmlParseSample/xmlParseSample-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "xmlParseSample/xmlParseSample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

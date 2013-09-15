@@ -1,0 +1,26 @@
+<students>
+    <student>
+        <name>
+            <fistName>黄</fistName>
+            <lastName>海</lastName>
+        </name>
+        <age>18</age>
+        <address>北京</address>
+    </student>
+    <student>
+        <name>
+            <fistName>方</fistName>
+            <lastName>子辰</lastName>
+        </name>
+        <age>18</age>
+        <address>北京</address>
+    </student>
+    <student>
+        <name>
+            <fistName>许</fistName>
+            <lastName>鑫雨</lastName>
+        </name>
+        <age>18</age>
+        <address>北京</address>
+    </student>
+</students>

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "GDataXMLNode.h"
 @interface ViewController : UIViewController
 
 @end
